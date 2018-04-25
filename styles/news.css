@@ -1,0 +1,30 @@
+#newsContainer {
+    margin-top: 2em;
+    border: 1px solid black;
+}
+
+#newsContainer .title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#newsContainer .news-item {
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 3em;
+}
+
+#newsContainer .news-item .news-title {
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+    font-size: 2rem;
+    background-color: #373a48;
+    color: white;
+    text-align: center;
+}
+
+
+#newsContainer .news-item .news-content {
+    font-size: 1.4em;
+}

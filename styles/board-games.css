@@ -1,0 +1,39 @@
+.board-game-card-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   grid-gap: 8em;
+   margin: 30px;
+}
+
+.board-game-card,
+.board-game-card-textholder{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.board-game-card-textholder {
+   margin-top: 20px;
+}
+
+.board-game-card-title {
+   font-weight: bolder;
+}
+
+.board-game-card-description {
+   height: 200px;
+}
+
+@media only screen and (max-width: 1600px) {
+   .board-game-card-container {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media only screen and (max-width: 1100px) {
+   .board-game-card-container {
+      grid-template-columns: 1fr;
+   }
+}

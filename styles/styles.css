@@ -1,0 +1,232 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* global variables */
+:root {
+    --main-color: black;
+    --main-font-color: white;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 'nav nav'
+                         'sidebar main'
+                         'footer footer';
+
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 6fr;
+    margin: 0;
+}
+
+aside {
+    grid-area: sidebar;
+    border: 1px solid black;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--main-font-color);
+    border: 1px solid black;
+}
+
+/*Lightbox override*/
+.lb-data .lb-caption {
+    font-size: 1.7em !important;
+}
+
+.lb-data .lb-number {
+    font-size: 1.2em !important;
+}
+
+.pagination {
+    margin-right: 5em;
+    margin-top: 1em;
+    float: right;
+}
+
+/*Card's css*/
+.card-style {
+    float: left;
+    padding: 0 1.7rem;
+}
+.card-style .menu-content {
+    margin: 0;
+    list-style-type: none;
+    background: rgba(0, 0, 0, .4);
+    padding: 0.5em;
+}
+
+.card-style .menu-content::before, .card .menu-content::after {
+    content: '';
+    display: table;
+}
+
+.card-style .menu-content::after {
+    clear: both;
+}
+
+.card-style .menu-content li {
+    display: inline-block;
+}
+
+.card-style .menu-content a {
+    color: #fff;
+}
+
+.card-style .menu-content span {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Open Sans';
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.card-style .wrapper {
+    background-color: #fff;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-style .wrapper:hover .data {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.card-style .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    -webkit-transform: translateY(calc(70px + 1em));
+    transform: translateY(calc(70px + 1em));
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.card-style .data .content {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.card-style .title {
+    margin-top: 10px;
+    font-size: 1.6em;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    text-shadow: 3px 3px black;
+}
+
+.card-style .text {
+    margin: 0;
+    padding: 5px;
+    height: 26px;
+    border-radius: 20px 20px 0 0;
+    text-shadow: 2px 2px black;
+}
+
+.card-style input[type='checkbox'] {
+    display: none;
+}
+
+.card-style input[type='checkbox']:checked + .menu-content {
+    -webkit-transform: translateY(-60px);
+    transform: translateY(-60px);
+}
+
+.card-style-1 .wrapper:hover .menu-content span {
+    -webkit-transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px);
+    opacity: 1;
+}
+
+.card-style-1 .header {
+    color: #fff;
+    padding: 1em;
+}
+
+.card-style-1 .header::before, .card-style-1 .header::after {
+    content: '';
+    display: table;
+}
+
+.card-style-1 .header::after {
+    clear: both;
+}
+
+.card-style-1 .header .date {
+    float: left;
+    font-size: 12px;
+}
+
+.card-style-1 .menu-content {
+    float: right;
+}
+
+.card-style-1 .menu-content li {
+    margin: 0 5px;
+    position: relative;
+}
+
+.card-style-1 .menu-content span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.card-style-1 .data {
+    color: #fff;
+    -webkit-transform: translateY(calc(70px + 4em));
+    transform: translateY(calc(70px + 4em));
+}
+
+.card-style-1 .title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-style-1 .title a:hover {
+    text-decoration: underline;
+}
+
+.card-style-1 .button {
+    display: block;
+    width: 100px;
+    margin: 7em auto 1em;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    line-height: 1;
+    position: relative;
+    font-weight: 700;
+    background: rgba(0, 0, 0, .4);
+    padding: 1em;
+}
+
+.card-style-1 .button::after {
+    content: '\2192';
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.card-style-1 .button:hover::after {
+    -webkit-transform: translate(5px, -50%);
+    transform: translate(5px, -50%);
+    opacity: 1;
+}

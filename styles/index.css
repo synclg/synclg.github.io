@@ -1,0 +1,68 @@
+.carousel-inner {
+    margin: 0 auto;
+    width: 90%;
+    max-height: 800px !important;
+    margin-top: 3em;
+}
+
+.carousel-inner > .carousel-item {
+    max-height: 700px !important;
+}
+
+.carousel-inner img {
+    max-height: 800px;    /* Set slide height here */
+    width: 100%;
+}
+
+.carousel-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-shadow: 3px 3px black;
+}
+
+.carousel-item p {
+    text-shadow: 3px 3px black;
+}
+
+#indexSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin: 2em auto;
+    width: 85%;
+}
+
+#indexSections > .sections {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+#indexSections > .sections .title {
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    font-size: 2em;
+    background-color: #373a48;
+    color: white;
+}
+
+#indexSections > .sections .items {
+    margin: 2em;
+}
+
+#indexSections > .sections .items a {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1em;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+#indexSections > .sections .items img {
+    width: 10rem;
+    height: 10rem;
+}
+

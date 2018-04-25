@@ -1,0 +1,39 @@
+/* nav's css*/
+
+nav {
+    background-color: #373a48;
+    color: black;
+    grid-area: nav;
+    border: 1px solid black;
+}
+
+.nav.navbar-nav {
+    flex-direction: row;
+}
+
+.nav.navbar-nav li {
+    margin-right: 25px;
+}
+
+.nav.navbar-nav li a {
+    color: var(--main-font-color);
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.nav.navbar-nav li a:hover {
+    border-bottom: 3px solid lightblue;
+    transition: 200ms;
+    color: lightblue;
+}
+
+#logoImage {
+    height:70px;
+    width:100px;
+}
+
+.selected {
+    border-bottom: 3px solid lightblue;
+}
